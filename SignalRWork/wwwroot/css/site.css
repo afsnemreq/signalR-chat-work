@@ -1,0 +1,102 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.message-bar {
+    width: 95%;
+    border: 2px solid #0000000f;
+    border-radius: 15px;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+    .message-bar:focus-visible {
+        width: 95%;
+        border: 2px solid #0000000f !important;
+        border-radius: 15px;
+        padding-left: 20px;
+        font-size: 12px;
+    }
+
+.send-area {
+    padding: 5px;
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+}
+
+.application {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-area {
+    background-color: #f5eeee;
+    padding: 30px;
+    width: 500px;
+    height: 400px;
+    position: relative;
+    border-radius: 25px;
+    border: 2px solid #0000000f;
+}
+
+.btn-submit {
+    font-weight: 200;
+    font-size: 12px;
+    background-color: #565656;
+    border: none !important;
+    border-radius: 15px;
+}
+
+.my-messages-bar {
+    display: block;
+    width: 99%;
+    text-align: right;
+    background-color: #5de89d;
+    padding: 10px 10px 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.outher-messages-bar {
+    display: block;
+    width: 99%;
+    text-align: left;
+    background-color: #e98b8b;
+    padding: 10px 10px 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.message-area {
+    overflow-y: scroll;
+    height: 85%;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: black;
+    }
