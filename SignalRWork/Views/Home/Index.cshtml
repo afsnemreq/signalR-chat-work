@@ -1,22 +1,29 @@
 ﻿
-
-@*
-<div class="connection" style="color:darkorange;background-color: dimgrey; width: 250px; display: none;">
-</div>*@
-
-<div class="chat-area">
-
-    <div class="message-area" id="message-area">
-        <div id="outher-messages">
-        </div>
-        <div id="my-messages">
-        </div>
-    </div>
-
-
-
-    <div class="send-area">
-        <input type="text" class="message-bar">
-        <button class="btn btn-success btn-submit">Gönder</button>
+<div class="user-area">
+    <div>
+        <input type="text" class="user-bar" placeholder="Kullanıcı adı girin.">
+        <button type="button" class="btn btn-success user-submit">Gönder</button>
     </div>
 </div>
+
+
+<div class="chats d-none">
+    <div class="count-area">Aktif Kişi Sayısı : <span class="count"></span></div>
+    <div class="chat-area">
+
+        <div class="message-area" id="message-area">
+            <div id="outher-messages">
+            </div>
+            <div id="my-messages">
+            </div>
+        </div>
+
+
+
+        <div class="send-area">
+            <input type="text" class="message-bar">
+            <button class="btn btn-success btn-submit">Gönder</button>
+        </div>
+    </div>
+</div>
+

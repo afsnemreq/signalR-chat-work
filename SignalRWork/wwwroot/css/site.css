@@ -3,7 +3,9 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
-
+.count {
+    font-weight:800;
+}
 .message-bar {
     width: 95%;
     border: 2px solid #0000000f;
@@ -33,7 +35,7 @@ body {
 .application {
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -100,3 +102,30 @@ body {
     ::-webkit-scrollbar-thumb:hover {
         background: black;
     }
+.count-area {
+    margin-bottom:10px
+}
+
+.user-bar {
+    padding: 10px;
+    padding-left: 15px;
+    border: 2px solid lightgrey;
+    border-radius: 60px;
+    width: 510px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.user-submit {
+    padding: 7px;
+    border: 2px solid lightgrey;
+    border-radius: 60px;
+    width: 150px;
+    font-size: 16px;
+}
+
+.user-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

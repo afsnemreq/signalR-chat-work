@@ -1,4 +1,5 @@
 ﻿$(document).ready(() => {
+    let userName;
     let requestUrl = window.location + "myhub";
     var connection = new signalR.HubConnectionBuilder()
         .withUrl(requestUrl)
@@ -9,14 +10,17 @@
         .then(() => console.log("Bağlantı başarıyla gerçekleştirildi."))
         .catch(error => console.log("Bağlantı sağlanırken beklenmeyen bir hatayla karşılaşıldı."));
 
+    $(".user-submit").click(() => {
+        userName = $(".user-bar").val();
+        $(".user-area").addClass("d-none");
+        $(".chats").removeClass("d-none");
+    });
+
 
     $(".btn-submit").click(() => {
-        let message = $(".message-bar").val();
+        let message = capitalizeFirstLetter(userName + " : " + $(".message-bar").val());
         connection.invoke("SendMessageAsync", message)
             .catch(error => console.log("Mesaj gönderilirken hata alınmıştır."));
-
-
-
 
     });
 
@@ -41,7 +45,6 @@
 
 
     connection.on("userJoined", connectionId => {
-
 
         $(".connection").html(`${connectionId} katıldı.`);
         $(".connection").show(2000, () => {
@@ -69,6 +72,12 @@
         for (const client in clients) {
             lis += `${clients[client]}`;
         }
-        $("#clients").html(lis);
+        $(".count").empty();
+        $(".count").append(clients.length);
     });
 });
+
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
